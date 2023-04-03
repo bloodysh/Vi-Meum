@@ -16,51 +16,31 @@
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     </head>
     <body>
-    <nav>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Museum Vision</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Nouvelle entrée <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Visite en cours</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Paramétrage des expos</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Museum Vision</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./?action=nouvelleEntree">Nouvelle Entrée</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Visites en cours</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Paramétrages des expos</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
             </div>
         </nav>
 
-        </ul>
-    </nav>
-    <div id="bouton">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <ul id="menuContextuel">
-        <li><img src="images/craiyon.png" height="80" lenght=50 alt="logo" /></li>
-        <?php if (isset($menuBurger)) { ?>
-            <?php for ($i = 0; $i < count($menuBurger); $i++) { ?>
-                <li>
-                    <a href="<?php echo $menuBurger[$i]['url']; ?>">
-                        <?php echo $menuBurger[$i]['label']; ?>
-                    </a>
-                </li>
-            <?php } ?>
-        <?php } ?>
-    </ul>
 
-    <div id="corps">
